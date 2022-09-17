@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>我的第一篇博客 | Hexo</title>
+  <title>maven-compiler-plugin依赖导入时报红 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="第一章内容  第二章内容 参考文献">
+  <meta name="description" content="maven-compiler-plugin依赖导入时报红在写maven依赖时导入maven-compiler-plugin时报红，刷新maven无反应，也不报错，就是一闪而过 具体写法如下 1234567891011121314151617181920212223242526272829    &lt;build&gt;    &lt;plugins&gt;        &lt;plugin&amp;g">
 <meta property="og:type" content="article">
-<meta property="og:title" content="我的第一篇博客">
-<meta property="og:url" content="http://example.com/2022/09/17/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/index.html">
+<meta property="og:title" content="maven-compiler-plugin依赖导入时报红">
+<meta property="og:url" content="http://example.com/2022/09/17/maven-compiler-plugin%E4%BE%9D%E8%B5%96%E5%AF%BC%E5%85%A5%E6%97%B6%E6%8A%A5%E7%BA%A2/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="第一章内容  第二章内容 参考文献">
+<meta property="og:description" content="maven-compiler-plugin依赖导入时报红在写maven依赖时导入maven-compiler-plugin时报红，刷新maven无反应，也不报错，就是一闪而过 具体写法如下 1234567891011121314151617181920212223242526272829    &lt;build&gt;    &lt;plugins&gt;        &lt;plugin&amp;g">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-09-17T10:32:17.000Z">
-<meta property="article:modified_time" content="2022-09-17T10:33:50.307Z">
+<meta property="article:published_time" content="2022-09-17T14:40:23.000Z">
+<meta property="article:modified_time" content="2022-09-17T14:47:26.680Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -154,30 +154,33 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-我的第一篇博客" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-maven-compiler-plugin依赖导入时报红" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      我的第一篇博客
+      maven-compiler-plugin依赖导入时报红
     </h1>
   
 
         
-        <a href="/2022/09/17/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-  	<time datetime="2022-09-17T10:32:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-17</time>
+        <a href="/2022/09/17/maven-compiler-plugin%E4%BE%9D%E8%B5%96%E5%AF%BC%E5%85%A5%E6%97%B6%E6%8A%A5%E7%BA%A2/" class="archive-article-date">
+  	<time datetime="2022-09-17T14:40:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-17</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><p>内容</p>
-<hr>
-<h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><p>内容</p>
-<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2>
+        <h2 id="maven-compiler-plugin依赖导入时报红"><a href="#maven-compiler-plugin依赖导入时报红" class="headerlink" title="maven-compiler-plugin依赖导入时报红"></a>maven-compiler-plugin依赖导入时报红</h2><pre><code>在写maven依赖时导入maven-compiler-plugin时报红，刷新maven无反应，也不报错，就是一闪而过
+具体写法如下
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">    &lt;build&gt;</span><br><span class="line">    &lt;plugins&gt;</span><br><span class="line">        &lt;plugin&gt;</span><br><span class="line">            &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;</span><br><span class="line">            &lt;version&gt;2.3.2&lt;/version&gt;</span><br><span class="line">            &lt;configuration&gt;</span><br><span class="line">                &lt;source&gt;1.8&lt;/source&gt;</span><br><span class="line">                &lt;target&gt;1.8&lt;/target&gt;</span><br><span class="line">            &lt;/configuration&gt;</span><br><span class="line">        &lt;/plugin&gt;</span><br><span class="line">        &lt;plugin&gt;</span><br><span class="line">            &lt;artifactId&gt;maven-assembly-plugin&lt;/artifactId&gt;</span><br><span class="line">            &lt;configuration&gt;</span><br><span class="line">                &lt;descriptorRefs&gt;</span><br><span class="line">                    &lt;descriptorRef&gt;jar-with-dependencies&lt;/descriptorRef&gt;</span><br><span class="line">                &lt;/descriptorRefs&gt;</span><br><span class="line">            &lt;/configuration&gt;</span><br><span class="line">            &lt;executions&gt;</span><br><span class="line">                &lt;execution&gt;</span><br><span class="line">                    &lt;id&gt;make-assembly&lt;/id&gt;</span><br><span class="line">                    &lt;phase&gt;package&lt;/phase&gt;</span><br><span class="line">                    &lt;goals&gt;</span><br><span class="line">                        &lt;goal&gt;single&lt;/goal&gt;</span><br><span class="line">                    &lt;/goals&gt;</span><br><span class="line">                &lt;/execution&gt;</span><br><span class="line">            &lt;/executions&gt;</span><br><span class="line">        &lt;/plugin&gt;</span><br><span class="line">    &lt;/plugins&gt;</span><br><span class="line">&lt;/build&gt;</span><br></pre></td></tr></table></figure>
+查看官方文档后，添加官方使用maven-compiler-plugin的方法后刷新maven成功解决问题，添加如下代码块
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;2.3.2&lt;/version&gt;</span><br><span class="line">    &lt;type&gt;maven-plugin&lt;/type&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+</code></pre>
+
       
 
       
@@ -256,7 +259,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/09/17/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/09/17/maven-compiler-plugin%E4%BE%9D%E8%B5%96%E5%AF%BC%E5%85%A5%E6%97%B6%E6%8A%A5%E7%BA%A2/" alt="微信分享二维码">
     </div>
 </div>
 
