@@ -152,6 +152,73 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-flink集群报错switched-from-RUNNING-to-FAILED-with-failure-cause-java-io-FileNotFoundException-The-provided-file-path-xxx-does-not-exist" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/09/19/flink%E9%9B%86%E7%BE%A4%E6%8A%A5%E9%94%99switched-from-RUNNING-to-FAILED-with-failure-cause-java-io-FileNotFoundException-The-provided-file-path-xxx-does-not-exist/">flink集群报错switched from RUNNING to FAILED with failure cause: java.io.FileNotFoundException: The provided file path xxx does not exist.</a>
+    </h1>
+  
+
+        
+        <a href="/2022/09/19/flink%E9%9B%86%E7%BE%A4%E6%8A%A5%E9%94%99switched-from-RUNNING-to-FAILED-with-failure-cause-java-io-FileNotFoundException-The-provided-file-path-xxx-does-not-exist/" class="archive-article-date">
+  	<time datetime="2022-09-19T14:01:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-19</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="报错"><a href="#报错" class="headerlink" title="报错"></a>报错</h1><p>在运行flink集群时，报错，查看日志，报错内容为</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">switched from RUNNING to FAILED with failure cause: java.io.FileNotFoundException: The provided file path /opt/module/applog/cxk_output_1_0.jsons does not exist.</span><br></pre></td></tr></table></figure>
+<p>有两种情况</p>
+<h2 id="第一种情况"><a href="#第一种情况" class="headerlink" title="第一种情况"></a>第一种情况</h2><p>检查jar包中文件路径是否书写正确，我检查了好几遍是正确的</p>
+<h2 id="第二种情况"><a href="#第二种情况" class="headerlink" title="第二种情况"></a>第二种情况</h2><p>我发现报错的是task Manager，job Manager并没有报错，而task Manager在集群中的另一个节点上，而文件只上传到其中一个节点，故找不到文件<br>分发文件在所有task Manager中，就解决问题</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/09/19/flink%E9%9B%86%E7%BE%A4%E6%8A%A5%E9%94%99switched-from-RUNNING-to-FAILED-with-failure-cause-java-io-FileNotFoundException-The-provided-file-path-xxx-does-not-exist/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-DENIED-Redis-is-running-in-protected-mode-because-protected-mode-is-enabled" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
