@@ -152,6 +152,74 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-maven-compiler-plugin依赖导入时报红" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/09/17/maven-compiler-plugin%E4%BE%9D%E8%B5%96%E5%AF%BC%E5%85%A5%E6%97%B6%E6%8A%A5%E7%BA%A2/">maven-compiler-plugin依赖导入时报红</a>
+    </h1>
+  
+
+        
+        <a href="/2022/09/17/maven-compiler-plugin%E4%BE%9D%E8%B5%96%E5%AF%BC%E5%85%A5%E6%97%B6%E6%8A%A5%E7%BA%A2/" class="archive-article-date">
+  	<time datetime="2022-09-17T14:40:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="maven-compiler-plugin依赖导入时报红"><a href="#maven-compiler-plugin依赖导入时报红" class="headerlink" title="maven-compiler-plugin依赖导入时报红"></a>maven-compiler-plugin依赖导入时报红</h2><pre><code>在写maven依赖时导入maven-compiler-plugin时报红，刷新maven无反应，也不报错，就是一闪而过
+具体写法如下
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">    &lt;build&gt;</span><br><span class="line">    &lt;plugins&gt;</span><br><span class="line">        &lt;plugin&gt;</span><br><span class="line">            &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;</span><br><span class="line">            &lt;version&gt;2.3.2&lt;/version&gt;</span><br><span class="line">            &lt;configuration&gt;</span><br><span class="line">                &lt;source&gt;1.8&lt;/source&gt;</span><br><span class="line">                &lt;target&gt;1.8&lt;/target&gt;</span><br><span class="line">            &lt;/configuration&gt;</span><br><span class="line">        &lt;/plugin&gt;</span><br><span class="line">        &lt;plugin&gt;</span><br><span class="line">            &lt;artifactId&gt;maven-assembly-plugin&lt;/artifactId&gt;</span><br><span class="line">            &lt;configuration&gt;</span><br><span class="line">                &lt;descriptorRefs&gt;</span><br><span class="line">                    &lt;descriptorRef&gt;jar-with-dependencies&lt;/descriptorRef&gt;</span><br><span class="line">                &lt;/descriptorRefs&gt;</span><br><span class="line">            &lt;/configuration&gt;</span><br><span class="line">            &lt;executions&gt;</span><br><span class="line">                &lt;execution&gt;</span><br><span class="line">                    &lt;id&gt;make-assembly&lt;/id&gt;</span><br><span class="line">                    &lt;phase&gt;package&lt;/phase&gt;</span><br><span class="line">                    &lt;goals&gt;</span><br><span class="line">                        &lt;goal&gt;single&lt;/goal&gt;</span><br><span class="line">                    &lt;/goals&gt;</span><br><span class="line">                &lt;/execution&gt;</span><br><span class="line">            &lt;/executions&gt;</span><br><span class="line">        &lt;/plugin&gt;</span><br><span class="line">    &lt;/plugins&gt;</span><br><span class="line">&lt;/build&gt;</span><br></pre></td></tr></table></figure>
+查看官方文档后，添加官方使用maven-compiler-plugin的方法后刷新maven成功解决问题，添加如下代码块
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;2.3.2&lt;/version&gt;</span><br><span class="line">    &lt;type&gt;maven-plugin&lt;/type&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+</code></pre>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/09/17/maven-compiler-plugin%E4%BE%9D%E8%B5%96%E5%AF%BC%E5%85%A5%E6%97%B6%E6%8A%A5%E7%BA%A2/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
