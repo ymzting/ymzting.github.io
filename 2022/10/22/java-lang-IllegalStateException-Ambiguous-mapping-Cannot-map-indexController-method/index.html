@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>SpringBoot 报错 No converter found for return value of type | Hexo</title>
+  <title>java.lang.IllegalStateException: Ambiguous mapping. Cannot map &#39;indexController&#39; method  | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="报错在使用SpringBoot时，测试自动封装，post提交参数与类属性相同，运行网络报错400 改错发现是自己自定义的类没有写get和set方法，是私有属性。">
+  <meta name="description" content="使用java springBoot的时候，报以下错误12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849Error starting ApplicationContext. To display the conditions report re-run your appli">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SpringBoot 报错 No converter found for return value of type">
-<meta property="og:url" content="http://example.com/2022/10/21/SpringBoot-%E6%8A%A5%E9%94%99-No-converter-found-for-return-value-of-type/index.html">
+<meta property="og:title" content="java.lang.IllegalStateException: Ambiguous mapping. Cannot map &#39;indexController&#39; method ">
+<meta property="og:url" content="http://example.com/2022/10/22/java-lang-IllegalStateException-Ambiguous-mapping-Cannot-map-indexController-method/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="报错在使用SpringBoot时，测试自动封装，post提交参数与类属性相同，运行网络报错400 改错发现是自己自定义的类没有写get和set方法，是私有属性。">
+<meta property="og:description" content="使用java springBoot的时候，报以下错误12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849Error starting ApplicationContext. To display the conditions report re-run your appli">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-10-21T10:47:11.000Z">
-<meta property="article:modified_time" content="2022-10-21T10:49:30.192Z">
+<meta property="article:published_time" content="2022-10-22T07:52:19.000Z">
+<meta property="article:modified_time" content="2022-10-22T07:54:31.608Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -154,28 +154,30 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-SpringBoot-报错-No-converter-found-for-return-value-of-type" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-java-lang-IllegalStateException-Ambiguous-mapping-Cannot-map-indexController-method" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      SpringBoot 报错 No converter found for return value of type
+      java.lang.IllegalStateException: Ambiguous mapping. Cannot map &#39;indexController&#39; method 
     </h1>
   
 
         
-        <a href="/2022/10/21/SpringBoot-%E6%8A%A5%E9%94%99-No-converter-found-for-return-value-of-type/" class="archive-article-date">
-  	<time datetime="2022-10-21T10:47:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-10-21</time>
+        <a href="/2022/10/22/java-lang-IllegalStateException-Ambiguous-mapping-Cannot-map-indexController-method/" class="archive-article-date">
+  	<time datetime="2022-10-22T07:52:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-10-22</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="报错"><a href="#报错" class="headerlink" title="报错"></a>报错</h1><p>在使用SpringBoot时，测试自动封装，post提交参数与类属性相同，运行网络报错400</p>
-<h1 id="改错"><a href="#改错" class="headerlink" title="改错"></a>改错</h1><p>发现是自己自定义的类没有写get和set方法，是私有属性。</p>
+        <h1 id="使用java-springBoot的时候，报以下错误"><a href="#使用java-springBoot的时候，报以下错误" class="headerlink" title="使用java springBoot的时候，报以下错误"></a>使用java springBoot的时候，报以下错误</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">Error starting ApplicationContext. To display the conditions report re-run your application with &#x27;debug&#x27; enabled.</span><br><span class="line">2022-10-22 15:51:37.490 ERROR 25264 --- [  restartedMain] o.s.boot.SpringApplication               : Application run failed</span><br><span class="line"></span><br><span class="line">org.springframework.beans.factory.BeanCreationException: Error creating bean with name &#x27;requestMappingHandlerMapping&#x27; defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map &#x27;indexController&#x27; method </span><br><span class="line">org.ymzting.bootwebadmin.controller.IndexController#mainPage()</span><br><span class="line">to &#123;GET [/index.html]&#125;: There is already &#x27;indexController&#x27; bean method</span><br><span class="line">org.ymzting.bootwebadmin.controller.IndexController#mainPage(HttpSession, Model) mapped.</span><br><span class="line">	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788) ~[spring-beans-5.3.2.jar:5.3.2]</span><br><span class="line">	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:609) ~[spring-beans-5.3.2.jar:5.3.2]</span><br><span class="line">	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531) ~[spring-beans-5.3.2.jar:5.3.2]</span><br><span class="line">	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.2.jar:5.3.2]</span><br><span class="line">	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.2.jar:5.3.2]</span><br><span class="line">	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.2.jar:5.3.2]</span><br><span class="line">	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.2.jar:5.3.2]</span><br><span class="line">	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944) ~[spring-beans-5.3.2.jar:5.3.2]</span><br><span class="line">	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:923) ~[spring-context-5.3.2.jar:5.3.2]</span><br><span class="line">	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:588) ~[spring-context-5.3.2.jar:5.3.2]</span><br><span class="line">	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144) ~[spring-boot-2.4.1.jar:2.4.1]</span><br><span class="line">	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767) [spring-boot-2.4.1.jar:2.4.1]</span><br><span class="line">	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) [spring-boot-2.4.1.jar:2.4.1]</span><br><span class="line">	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426) [spring-boot-2.4.1.jar:2.4.1]</span><br><span class="line">	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326) [spring-boot-2.4.1.jar:2.4.1]</span><br><span class="line">	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1309) [spring-boot-2.4.1.jar:2.4.1]</span><br><span class="line">	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1298) [spring-boot-2.4.1.jar:2.4.1]</span><br><span class="line">	at org.ymzting.bootwebadmin.BootWebAdminApplication.main(BootWebAdminApplication.java:10) [classes/:na]</span><br><span class="line">	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_291]</span><br><span class="line">	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_291]</span><br><span class="line">	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_291]</span><br><span class="line">	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_291]</span><br><span class="line">	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.4.1.jar:2.4.1]</span><br><span class="line">Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map &#x27;indexController&#x27; method </span><br><span class="line">org.ymzting.bootwebadmin.controller.IndexController#mainPage()</span><br><span class="line">to &#123;GET [/index.html]&#125;: There is already &#x27;indexController&#x27; bean method</span><br><span class="line">org.ymzting.bootwebadmin.controller.IndexController#mainPage(HttpSession, Model) mapped.</span><br><span class="line">	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:644) ~[spring-webmvc-5.3.2.jar:5.3.2]</span><br><span class="line">	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:611) ~[spring-webmvc-5.3.2.jar:5.3.2]</span><br><span class="line">	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:316) ~[spring-webmvc-5.3.2.jar:5.3.2]</span><br><span class="line">	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:395) ~[spring-webmvc-5.3.2.jar:5.3.2]</span><br><span class="line">	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76) ~[spring-webmvc-5.3.2.jar:5.3.2]</span><br><span class="line">	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:286) ~[spring-webmvc-5.3.2.jar:5.3.2]</span><br><span class="line">	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684) ~[na:1.8.0_291]</span><br><span class="line">	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:284) ~[spring-webmvc-5.3.2.jar:5.3.2]</span><br><span class="line">	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:256) ~[spring-webmvc-5.3.2.jar:5.3.2]</span><br><span class="line">	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:215) ~[spring-webmvc-5.3.2.jar:5.3.2]</span><br><span class="line">	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:203) ~[spring-webmvc-5.3.2.jar:5.3.2]</span><br><span class="line">	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:206) ~[spring-webmvc-5.3.2.jar:5.3.2]</span><br><span class="line">	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1847) ~[spring-beans-5.3.2.jar:5.3.2]</span><br><span class="line">	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784) ~[spring-beans-5.3.2.jar:5.3.2]</span><br><span class="line">	... 22 common frames omitted</span><br></pre></td></tr></table></figure>
+
+<p>查阅一定资料后发现所有格式正确</p>
+<h1 id="改错"><a href="#改错" class="headerlink" title="改错"></a>改错</h1><p>检查后发现，有相同路径的get请求导致错误，不小心有一份相同的get请求</p>
 
       
 
@@ -255,7 +257,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/10/21/SpringBoot-%E6%8A%A5%E9%94%99-No-converter-found-for-return-value-of-type/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/10/22/java-lang-IllegalStateException-Ambiguous-mapping-Cannot-map-indexController-method/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -269,18 +271,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2022/10/22/java-lang-IllegalStateException-Ambiguous-mapping-Cannot-map-indexController-method/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2022/11/02/webpack-%E6%97%A0%E6%B3%95%E5%8A%A0%E8%BD%BD%E6%96%87%E4%BB%B6-%E5%9B%A0%E4%B8%BA%E5%9C%A8%E6%AD%A4%E7%B3%BB%E7%BB%9F%E4%B8%8A%E7%A6%81%E6%AD%A2%E8%BF%90%E8%A1%8C%E8%84%9A%E6%9C%AC/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          java.lang.IllegalStateException: Ambiguous mapping. Cannot map &#39;indexController&#39; method 
+          webpack : 无法加载文件 因为在此系统上禁止运行脚本
         
       </div>
     </a>
   
   
-    <a href="/2022/10/12/idea%E9%83%A8%E7%BD%B2tomcat%E6%89%93%E5%BC%80%E6%97%B6%E8%B7%AF%E5%BE%84%E6%AD%A3%E7%A1%AE%E5%87%BA%E7%8E%B0404/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">idea部署tomcat打开时路径正确出现404</div>
+    <a href="/2022/10/21/SpringBoot-%E6%8A%A5%E9%94%99-No-converter-found-for-return-value-of-type/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">SpringBoot 报错 No converter found for return value of type</div>
       <i class="icon-circle-right"></i>
     </a>
   
