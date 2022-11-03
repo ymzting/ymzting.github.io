@@ -152,6 +152,73 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Missing-required-configuration-key-serializer-which-has-no-default-value" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/09/22/Missing-required-configuration-key-serializer-which-has-no-default-value/">Missing required configuration key.serializer which has no default value.</a>
+    </h1>
+  
+
+        
+        <a href="/2022/09/22/Missing-required-configuration-key-serializer-which-has-no-default-value/" class="archive-article-date">
+  	<time datetime="2022-09-22T11:49:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="出现错误"><a href="#出现错误" class="headerlink" title="出现错误"></a>出现错误</h1><p>今天在写kafka代码时报了这个错误</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Missing required configuration &quot;key.serializer&quot; which has no default value.</span><br></pre></td></tr></table></figure>
+<h1 id="解决问题"><a href="#解决问题" class="headerlink" title="解决问题"></a>解决问题</h1><p>提示序列化key.serializer这个值没有默认值，这是只需要在代码中加上两行代码</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">properties.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());</span><br><span class="line">properties.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG,StringSerializer.class.getName());</span><br></pre></td></tr></table></figure>
+<p>就可以解决问题</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/09/22/Missing-required-configuration-key-serializer-which-has-no-default-value/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-flink集群报错switched-from-RUNNING-to-FAILED-with-failure-cause-java-io-FileNotFoundException-The-provided-file-path-xxx-does-not-exist" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
