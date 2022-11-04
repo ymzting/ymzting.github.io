@@ -152,6 +152,71 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Invalid-bound-statement-not-found-org-xxx-dao-UserDao-getUserByMassage" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/11/04/Invalid-bound-statement-not-found-org-xxx-dao-UserDao-getUserByMassage/">Invalid bound statement (not found): org.xxx.dao.UserDao.getUserByMassage</a>
+    </h1>
+  
+
+        
+        <a href="/2022/11/04/Invalid-bound-statement-not-found-org-xxx-dao-UserDao-getUserByMassage/" class="archive-article-date">
+  	<time datetime="2022-11-04T01:37:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-11-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="出现错误"><a href="#出现错误" class="headerlink" title="出现错误"></a>出现错误</h1><p>mapper映射错误，但我检查过了不是拼写错误或者对应错误的问题</p>
+<h1 id="解决问题"><a href="#解决问题" class="headerlink" title="解决问题"></a>解决问题</h1><p>应该是idea版本太高了，太智能了，在application.properties文件中给你写好了很多属性，但是不正确<br>我习惯写application.yml，但是idea优先使用application.properties中的属性，所以映射错误，<br>将application.properties中的mybatis.mapper-locations改为你想要的路径就可以了</p>
+<p>如果你这样错了，那你也应该改一下<br>spring.datasource.url<br>spring.datasource.username<br>spring.datasource.password<br>为你的数据库地址和账号密码</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/11/04/Invalid-bound-statement-not-found-org-xxx-dao-UserDao-getUserByMassage/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Vue版本过高带来的一系列问题及解决方法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -701,75 +766,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2022/09/24/Linux%E4%BF%AE%E6%94%B9id%E6%97%A0%E6%95%88/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-ERROR-node-AbstractConfigurationProvider-Sink-k1-has-been-removed-due-to-an-error-during-configuration" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/09/23/ERROR-node-AbstractConfigurationProvider-Sink-k1-has-been-removed-due-to-an-error-during-configuration/">ERROR node.AbstractConfigurationProvider: Sink k1 has been removed due to an error during configuration</a>
-    </h1>
-  
-
-        
-        <a href="/2022/09/23/ERROR-node-AbstractConfigurationProvider-Sink-k1-has-been-removed-due-to-an-error-during-configuration/" class="archive-article-date">
-  	<time datetime="2022-09-23T06:06:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-23</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="错误"><a href="#错误" class="headerlink" title="错误"></a>错误</h1><p>今天使用flume从kafka冲消费数据向hdfs中储存时报了以下错误</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">ERROR node.AbstractConfigurationProvider: Sink k1 has been removed due to an error during configuration</span><br><span class="line">java.lang.NullPointerException: hdfs.path is required</span><br><span class="line">at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:895)</span><br><span class="line">        at org.apache.flume.sink.hdfs.HDFSEventSink.configure(HDFSEventSink.java:195)</span><br><span class="line">        at org.apache.flume.conf.Configurables.configure(Configurables.java:41)</span><br><span class="line">        at org.apache.flume.node.AbstractConfigurationProvider.loadSinks(AbstractConfigurationProvider.java:453)</span><br><span class="line">        at org.apache.flume.node.AbstractConfigurationProvider.getConfiguration(AbstractConfigurationProvider.java:106)</span><br><span class="line">        at org.apache.flume.node.PollingPropertiesFileConfigurationProvider$FileWatcherRunnable.run(PollingPropertiesFileConfigurationProvider.java:145)</span><br><span class="line">        at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)</span><br><span class="line">        at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)</span><br><span class="line">        at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)</span><br><span class="line">        at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)</span><br><span class="line">        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)</span><br><span class="line">        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)</span><br><span class="line">        at java.lang.Thread.run(Thread.java:750)</span><br></pre></td></tr></table></figure>
-<p>查看官网文档后发现是flume一行配置文件写错</p>
-<h1 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a1.sinks.k1.path=/origin_data/BILI_bigdata/log/BILI_JSON/%Y-%m-%d</span><br></pre></td></tr></table></figure>
-<p>这句话应该写成</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a1.sinks.k1.hdfs.path=/origin_data/BILI_bigdata/log/BILI_JSON/%Y-%m-%d</span><br></pre></td></tr></table></figure>
-<p>这样，加上hdfs标签</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/09/23/ERROR-node-AbstractConfigurationProvider-Sink-k1-has-been-removed-due-to-an-error-during-configuration/">展开全文 >></a>
         </p>
       
 
